@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  @Input() title = new String;
+  title = 'Ristorante Il Gambero Rosso';
   img:string = "patrick-tomasso-GXXYkSwndP4-unsplash.jpg"
 
   constructor() { }
