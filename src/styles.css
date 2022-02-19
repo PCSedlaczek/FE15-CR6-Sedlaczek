@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.cursive {
+  font-family: 'Great Vibes';
+  font-weight: bold;
+}
+.hero-img {
+  background-image: url("assets/img/stefan-vladimirov-Q_Moi2xjieU-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-dim {
+  background:rgba(0,0,0,0.6);
+}
+.max-w {
+  max-width: 1000px;
+}
