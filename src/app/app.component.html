@@ -1,0 +1,10 @@
+<header>
+  <navbar></navbar>
+</header>
+
+<!-- Share title property with child components -->
+<home [title]="title">
+  <router-outlet></router-outlet>
+</home>
+
+<foot [title]="title"></foot>
