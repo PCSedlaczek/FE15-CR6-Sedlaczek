@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  @Input() title = new String;
+  title = 'Ristorante Il Gambero Rosso';
   
   constructor() { }
   
