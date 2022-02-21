@@ -8,8 +8,9 @@ import { OrderComponent } from  './order/order.component';
 const routes: Routes = [
   {path: "", component: HomeComponent},
   {path: "about", component: AboutComponent},
-  {path: "menu", component: MenuComponent},
   {path: "order", component: OrderComponent},
+  {path: "menu", component: MenuComponent},
+  {path: 'dishes/:dishID', component: MenuComponent}
 ];
 
 @NgModule({
