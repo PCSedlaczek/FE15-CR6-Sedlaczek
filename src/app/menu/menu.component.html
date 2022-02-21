@@ -1,1 +1,25 @@
-<p>menu works!</p>
+<h1 class="my-4 cursive text-center">Our Specials</h1>
+
+<div class="container max-w">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-5">
+
+    <div class="col" *ngFor="let dish of dishes">
+      <div class="card">
+        <img src="/assets/img/{{dish.image}}" alt="{{dish.name}}" class="card-img-top">
+        <div class="card-body">
+          <h3>{{dish.name}}</h3>
+          <p>{{dish.desc}}</p>
+        </div>
+        <div class="card-footer bg-white">
+          <p class="my-1">{{dish.price | currency}}</p>
+        </div>
+        <div class="card-footer bg-white">
+          <button class="btn btn-sm btn-primary me-2" type="submit" *ngIf="dish.available == true" >Details</button>
+          <button class="btn btn-sm btn-success" type="submit" *ngIf="dish.available == true" >Order</button>
+          <p class="text-danger mb-1" *ngIf="dish.available == false">This dish is not available</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
