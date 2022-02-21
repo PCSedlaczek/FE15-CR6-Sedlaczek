@@ -1,1 +1,8 @@
-<p>details works!</p>
+
+<div *ngIf="dish">
+ <h3>{{dish.name}}</h3>
+ <h4>{{dish.price | currency:"EUR":"symbol"}}</h4>
+ <p>{{dish.desc}}</p>
+
+ <button (click)="addToCart()">Buy</button>
+</div>
