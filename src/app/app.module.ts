@@ -13,6 +13,7 @@ import { DetailsComponent } from './details/details.component';
 import { OrderComponent } from './order/order.component';
 import { CardComponent } from './card/card.component';
 import { SpecialsComponent } from './specials/specials.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SpecialsComponent } from './specials/specials.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
