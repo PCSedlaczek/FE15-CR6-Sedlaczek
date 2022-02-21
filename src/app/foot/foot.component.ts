@@ -7,7 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FootComponent implements OnInit {
   @Input() title = new String;
-  city: string = "Padova"
   name: string = "Petra Christina Sedlaczek";
 
 
