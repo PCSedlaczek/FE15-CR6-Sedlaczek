@@ -3,7 +3,7 @@
 <div class="container max-w">
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mb-5">
 
-    <div class="col" *ngFor="let dish of dishes">
+    <div class="col" *ngFor="let dish of dishes; index as dishID">
       <div class="card">
         <img src="/assets/img/{{dish.image}}" alt="{{dish.name}}" class="card-img-top">
         <div class="card-body">
@@ -14,7 +14,8 @@
           <p class="my-1">{{dish.price | currency}}</p>
         </div>
         <div class="card-footer bg-white">
-          <button class="btn btn-sm btn-primary me-2" type="submit" *ngIf="dish.available == true" >Details</button>
+          <a routerLink="details/{{dishID}}">
+          <button class="btn btn-sm btn-primary me-2" type="submit" *ngIf="dish.available == true" >Details</button></a>
           <button class="btn btn-sm btn-success" type="submit" *ngIf="dish.available == true" >Order</button>
           <p class="text-danger mb-1" *ngIf="dish.available == false">This dish is not available</p>
         </div>
