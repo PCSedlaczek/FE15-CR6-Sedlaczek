@@ -22,3 +22,8 @@
 menu {
   padding: 0
 }
+.card img {
+  height: 35vh;
+  object-fit: cover;
+  object-position: center;
+}
