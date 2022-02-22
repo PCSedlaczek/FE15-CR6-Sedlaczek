@@ -9,7 +9,7 @@ export interface Dishes {
 export const dishes = [
   {
     name: "Bruschetta",
-    desc: "Bread with ricotta cheese and fresh cherry tomatoes",
+    desc: "Ricotta cheese and cherry tomatoes on bread",
     price: 7.00,
     available: true,
     image: "antipasti/calum-lewis-rPkgYDh2bmo-unsplash.jpg"
@@ -17,7 +17,7 @@ export const dishes = [
   {
     name: "Caprese",
     desc: "Mozzarella with tomatoes and basil leaves",
-    price: 7.00,
+    price: 6.50,
     available: true,
     image: "antipasti/cristiano-pinto-x8Sc8rsfx08-unsplash.jpg"
   },
@@ -27,6 +27,13 @@ export const dishes = [
     price: 6.00,
     available: true,
     image: "insalate/tania-melnyczuk-xeTv9N2FjXA-unsplash.jpg"
+  },
+  {
+    name: "Insalata al Tonno",
+    desc: "Pasta salad with tuna and vegetables",
+    price: 7.00,
+    available: true,
+    image: "insalate/eiliv-sonas-aceron-mW0LIBBHNdE-unsplash.jpg"
   },
   {
     name: "Lasagne al forno",
