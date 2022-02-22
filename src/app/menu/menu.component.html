@@ -9,18 +9,29 @@
         <div class="card-body">
           <h3>{{dish.name}}</h3>
           <p>{{dish.desc}}</p>
-        </div>
-        <div class="card-footer bg-white">
-          <p class="my-1">{{dish.price | currency}}</p>
-        </div>
-        <div class="card-footer bg-white">
-          <a routerLink="details/{{dishID}}">
+          <p class="my-3">{{dish.price | currency:"EUR":"symbol"}}</p>
+          <a routerLink="dishes/{{dishID}}">
           <button class="btn btn-sm btn-primary me-2" type="submit" *ngIf="dish.available == true" >Details</button></a>
-          <button class="btn btn-sm btn-success" type="submit" *ngIf="dish.available == true" >Order</button>
+          <button class="btn btn-sm btn-success" type="submit" *ngIf="dish.available == true" (click)="addToCart(dish)" data-bs-toggle="modal" data-bs-target="#orderModal">Order</button>
           <p class="text-danger mb-1" *ngIf="dish.available == false">This dish is not available</p>
         </div>
       </div>
 
+    </div>
+  </div>
+</div>
+
+<!-- onSubmit Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="orderModalLabel">Cart updated</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body border-0">
+        Dish has been added to cart.
+      </div>
     </div>
   </div>
 </div>
