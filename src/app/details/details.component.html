@@ -1,8 +1,42 @@
+<div class="container">
+  <div class="col mx-auto">
 
-<div *ngIf="dish">
- <h3>{{dish.name}}</h3>
- <h4>{{dish.price | currency:"EUR":"symbol"}}</h4>
- <p>{{dish.desc}}</p>
+    <div class="card mb-3" *ngIf="dish">
+      <div class="row g-0">
+        <div class="col-md-6">
 
- <button (click)="addToCart()">Buy</button>
+          <div class="card-body">
+            <h3>{{dish.name}}</h3>
+            <p>{{dish.desc}}</p>
+
+            <p class="my-3">{{dish.price | currency:"EUR":"symbol"}}</p>
+
+            <button class="btn btn-sm btn-success my-1" type="submit" (click)="addToCart()" data-bs-toggle="modal" data-bs-target="#orderModal">Order</button>
+          </div>
+
+        </div>
+
+        <div class="col-md-6">
+          <img src="/assets/img/{{dish.image}}" alt="{{dish.name}}" class="card-img rounded-start">
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- onSubmit Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="orderModalLabel">Cart updated</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body border-0">
+        Dish has been added to cart.
+      </div>
+    </div>
+  </div>
 </div>

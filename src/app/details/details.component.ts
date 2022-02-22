@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router'; 
+import { Dishes, dishes } from '../dishes';
 import { CartService } from '../cart.service';
-import { dishes } from '../dishes';
-import { Dishes } from '../dishes';
 
 @Component({
-  selector: 'details',
+  selector: 'detail',
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
@@ -19,13 +18,12 @@ export class DetailsComponent implements OnInit {
     ) { }
 
   addToCart() {
-    window.alert('Dish has been added to the cart!');
     this.cartService.addToCart(this.dish);
     }
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
-      this.id = +params['dishID'];
+      this.id = +params["dishID"];
       this.dish = dishes[this.id];
     });
   }
